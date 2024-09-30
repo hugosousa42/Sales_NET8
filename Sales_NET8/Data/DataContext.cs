@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Sales_NET8.Data.Entities;
+﻿using Sales_NET8.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sales_NET8.Data
 {

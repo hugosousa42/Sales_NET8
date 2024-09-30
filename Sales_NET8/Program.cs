@@ -6,6 +6,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name= LocalConnection"));
+builder.Services.AddControllersWithViews();
+
+//Add runtime compilation
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+//Inject datacontext
+builder.Services.AddDbContext<DataContext>(o =>
+{
+    o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
