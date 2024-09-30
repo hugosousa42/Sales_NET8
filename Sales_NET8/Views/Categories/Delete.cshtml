@@ -1,16 +1,16 @@
-﻿@model Sales_NET8.Data.Entities.Country
+﻿@model Sales_NET8.Data.Entities.Category
 
 @{
-    ViewData["Title"] = "Apagar";
+    ViewData["Title"] = "Delete";
 }
 
-<h1>Apagar</h1>
+
 
 <h3>Tem certeza que quer apagar?</h3>
 <div>
-    
-    <partial name="_CountryDetails"/>
-    
+
+    <partial name="_CategoryDetails" />
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Apagar" class="btn btn-danger" /> |
